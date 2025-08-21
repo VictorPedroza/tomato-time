@@ -42,7 +42,7 @@ header .header-title::after {
   background-color: white;
 
   /* curva arredondada no lado esquerdo */
-  clip-path: path("M0,60 C90,50 75,0 150,-1 L150,60 Z");
+  clip-path: path("M0,60 C90,50 75,0 155,-1 L152,62 Z");
 }
 
 header .header-title .title {
@@ -68,6 +68,64 @@ header .header-title .title span {
     color: red;
 }
 
+header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+    padding: 12px;
+    padding-right: 150px;
+}
+
+header .header-content .header-item {
+    padding: 24px 8px;
+    background: white;
+    border-radius: 48px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none;
+}
+
+header .header-content .header-item:hover {
+    transform: scale(1.02);
+    transition: all 0.2s;
+}
+
+header .header-content .header-item i {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.615);
+}
+
+header .header-content .header-item p {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.red {
+    background-color: oklch(88.5% 0.062 18.334) !important;
+    color: oklch(63.7% 0.237 25.331);
+}
+
+.yellow {
+    background-color: oklch(94.5% 0.129 101.54) !important;
+    color: oklch(79.5% 0.184 86.047);
+}
+
+.green {
+    background-color: oklch(87.1% 0.15 154.449) !important;
+    color: oklch(72.3% 0.219 149.579);
+}
+
 main {
     width: 100%;
     height: calc(100% - 60px);
@@ -82,7 +140,7 @@ body {
     background: linear-gradient(135deg, #68df58, #007a2b, #68df58, #007a2b);
     background-size: 400% 400%;
     background-attachment: fixed;
-    animation: rotateBackground 20s ease infinite;
+    animation: rotateBackground 5s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +150,10 @@ body {
     0% {
         background-position: 0% 50%;
     }
-    100% {
+    66% {
         background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
